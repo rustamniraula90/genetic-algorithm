@@ -1,19 +1,24 @@
+body{
+  background: black;
+}
 .container{
+  background: white;
   height: 400px;
   width: 200px;
   position: absolute;
   border: 1px solid;
-  left: 40%;
+  left: 35%;
   top: 20%;
   transform: translateX(-50%);
 }
 
 .info-container{
+  background: white;
   height: 400px;
   width: 300px;
   position: absolute;
   border: 1px solid;
-  left: 60%;
+  left: 65%;
   top: 20%;
   transform: translateX(-50%);
 }
@@ -44,4 +49,40 @@
   height: 5px;
   width: 5px;
   background: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    left: 40%;
+    top: 20%;
+  }
+
+  .info-container{
+    left: 60%;
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container{
+    left: 30%;
+    top: 20%;
+  }
+
+  .info-container{
+    left: 70%;
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container{
+    left: 50%;
+    position: relative;
+  }
+
+  .info-container{
+    left: 50%;
+    position: relative;
+  }
 }

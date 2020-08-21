@@ -8,6 +8,7 @@ window.$ONLY_BEST = false;
 
 let task;
 let population;
+let clear = false;
 
 $("#population").val(window.$POPULATION_SIZE);
 $("#population").change(function(){
@@ -27,6 +28,7 @@ $("#oneStep").change(function(){
 });
 $("#start").click(start);
 $("#stop").click(stop);
+$("#pause").click(pause);
 $('#onlyBest').change(function() {
   if($(this).is(":checked")) {
     window.$ONLY_BEST = true;
@@ -37,14 +39,22 @@ $('#onlyBest').change(function() {
 
 function start(){
   if(population){
-    population.clear();
-    $("#generation").html(1);
-    $("#bestStep").html(0);
-    $("#bestFitness").html(0);
-    $("#fitnessSum").html(0);
+    if(clear){
+      population.clear();
+      $("#generation").html(1);
+      $("#bestStep").html(0);
+      $("#bestFitness").html(0);
+      $("#fitnessSum").html(0);
+    }
+  }else{
+    population = new Population();
+    population.show();
   }
-  population = new Population();
-  population.show();
+  setTask();
+clear = false;
+}
+
+function setTask(){
   task = setInterval(function(){
     if(!population.allDotsDead() && !population.complete){
       population.update();
@@ -62,5 +72,10 @@ function start(){
   },1);
 }
 function stop(){
+  pause();
+  clear = true;
+}
+
+function pause(){
   clearInterval(task);
 }
