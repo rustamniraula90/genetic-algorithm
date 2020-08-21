@@ -2,13 +2,33 @@
 <html>
 <head>
 	<title>Genetic Dot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="container" id="container">
 		<div class="goal"></div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+	<div class="info-container">
+		<p><b>Generation:</b><span id="generation"> 1<span></p>
+			<p><b>Best step:</b><span id="bestStep"> 0<span></p>
+				<p><b>Best Fitness:</b><span id="bestFitness"> 0<span></p>
+					<p><b>Max Fitness:</b><span> 1.0021978021978<span></p>
+						<p><b>Fitness Sum:</b><span id="fitnessSum"> 0<span></p>
+							<p><b>Only Best:</b> <input type="checkbox" id="onlyBest"></p>
+							<p><b>Population:</b> <input type="text" id="population"></p>
+							<p><b>Total Steps:</b> <input type="text" id="totalSteps"></p>
+							<p><b>Step Length:</b> <input type="text" id="oneStep"></p>
+							<p><b>Mutation %:</b> <input type="text" id="mutationPercentage"></p>
+							<p>
+								<button id="start">Start</button>
+								<button id="pause">Pause</button>
+								<button id="stop">Stop</button>
+							</p>
+						</div>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+						<script src="models/Dot.mjs" type="module"></script>
+						<script src="models/Population.mjs" type="module"></script>
+						<script src="app.js" type="module"></script>
+					</body>
+					</html>

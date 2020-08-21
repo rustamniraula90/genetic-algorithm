@@ -1,33 +1,47 @@
 .container{
-	height: 500px;
-    border: 1px solid;
-    width: 500px;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+  height: 400px;
+  width: 200px;
+  position: absolute;
+  border: 1px solid;
+  left: 40%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.info-container{
+  height: 400px;
+  width: 300px;
+  position: absolute;
+  border: 1px solid;
+  left: 60%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.info-container>p{
+  padding-left: 5px;
+  font-size: 12px;
 }
 
 .container .goal{
-	height: 16px;
-    width: 16px;
-    border: 1px solid yellow;
-    left: 50%;
-    top: 10%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    background: yellow;
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  top: 10%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  background: yellow;
 }
 
 .container .dot{
-	position: absolute;
-    height: 5px;
-    width: 5px;
-    border: 1px solid;
-    background: black;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background: black;
+  transform: translate(-50%,-50%);
 }
 .container .dot.best{
-    height: 10px;
-    width: 10px;
-    border: 1px solid green;
-    background: green;
+  height: 5px;
+  width: 5px;
+  background: red;
 }
